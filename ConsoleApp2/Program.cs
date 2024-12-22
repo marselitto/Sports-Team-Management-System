@@ -61,4 +61,62 @@ public class Team
     }
     
 }
+class Program
+{
+    static void Main(string[] args)
+    {
+        var team = new Team();
+        Console.WriteLine("Ile zawodników chcesz dodać do drużyny?");
+        int playerCount;
+        while (!int.TryParse(Console.ReadLine(), out playerCount) || playerCount <= 0)
+        {
+            Console.WriteLine("Proszę podać poprawną liczbę zawodników:");
+        }
+        for (int i = 0; i < playerCount; i++)
+        {
+            Console.WriteLine($"\nWprowadzanie danych dla zawodnika {i + 1}:");
+            Console.Write("Imię zawodnika: ");
+            string name = Console.ReadLine();
+                
+            Console.Write("Pozycja zawodnika: ");
+            string position = Console.ReadLine();
+                
+            int score;
+            Console.Write("Wynik zawodnika: ");
+            while (!int.TryParse(Console.ReadLine(), out score) || score < 0)
+            {
+                Console.WriteLine("Proszę podać poprawny wynik:");
+            }
+            team.AddPlayer(new Player(name, position, score));
+        }
+
+            
+        Console.WriteLine("\nStatystyki drużyny:");
+        foreach (var player in team.players)
+        {
+            Console.WriteLine($"Imie: {player.Name}, Pozycja: {player.Position}, Wynik: {player.Score}");
+        }
+            
+        double average = Team.CalculateTeamAverage(team.players);
+        Console.WriteLine($"\nŚredni wynik drużyny: {average}");
+            
+        Console.Write("\nPodaj pozycję, aby wyszukać zawodników: ");
+        string positionSearch = Console.ReadLine();
+        var filteredPlayers = team.SearchPlayersByPosition(positionSearch);
+        Console.WriteLine($"Zawodnicy z pozycją {positionSearch}:");
+        foreach (var player in filteredPlayers)
+        {
+            Console.WriteLine(player.Name);
+        }
+            
+        Console.Write("\nPodaj imię zawodnika, którego chcesz usunąć: ");
+        string playerToRemove = Console.ReadLine();
+        team.RemovePlayer(playerToRemove);
+        Console.WriteLine("\nPo usunięciu zawodnika:");
+        foreach (var player in team.players)
+        {
+            Console.WriteLine($"Imie: {player.Name}, Pozycja: {player.Position}, Wynik: {player.Score}");
+        }
+    }
+}
 
