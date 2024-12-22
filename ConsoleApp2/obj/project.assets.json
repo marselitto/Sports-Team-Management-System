@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jawor\\RiderProjects\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj",
+      "projectUniqueName": "C:\\Users\\jawor\\RiderProjects\\Sports-Team-Management-System\\ConsoleApp2\\ConsoleApp2.csproj",
       "projectName": "ConsoleApp2",
-      "projectPath": "C:\\Users\\jawor\\RiderProjects\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj",
+      "projectPath": "C:\\Users\\jawor\\RiderProjects\\Sports-Team-Management-System\\ConsoleApp2\\ConsoleApp2.csproj",
       "packagesPath": "C:\\Users\\jawor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jawor\\RiderProjects\\ConsoleApp2\\ConsoleApp2\\obj\\",
+      "outputPath": "C:\\Users\\jawor\\RiderProjects\\Sports-Team-Management-System\\ConsoleApp2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jawor\\AppData\\Roaming\\NuGet\\NuGet.Config",
